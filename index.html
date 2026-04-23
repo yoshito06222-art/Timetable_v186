@@ -1019,7 +1019,7 @@ function openADetail(id){
   const cls=a.classId?D.classes.find(function(c){return c.id===a.classId;}):null;
   const due=a.due?dueFmt(a.due):null;
   let html='<h2>'+a.name+'</h2>';
-  if(cls) html+='<div class="dsec"><div class="dlbl">時間割</div><div class="dval">'+cls.name+(cls.code?' ('+cls.code+')')+'</div></div>';
+  if(cls) html+='<div class="dsec"><div class="dlbl">時間割</div><div class="dval">'+cls.name+(cls.code?' ('+cls.code+')':'')+'</div></div>';
   if(due) html+='<div class="dsec"><div class="dlbl">期限</div><div class="dval"><span class="adue '+due.cls+'">'+due.txt+'</span></div></div>';
   if(a.note) html+='<div class="dsec"><div class="dlbl">メモ</div><div class="dval" style="font-size:13px;color:var(--mut);white-space:pre-wrap">'+a.note+'</div></div>';
   const body=document.getElementById('adetail-body'); body.innerHTML=html;
